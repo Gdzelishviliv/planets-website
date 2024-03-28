@@ -1,0 +1,29 @@
+.overviev-container-mobile>button {
+  background: transparent;
+  border: 0px;
+  color: #fff;
+  opacity: 0.5;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.929px;
+  text-transform: uppercase;
+  width: 80px;
+  cursor: pointer;
+  height: 50px;
+}
+.overviev-container-mobile{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.overviev-container-mobile>button:hover{
+    border-bottom: 4px solid #419EBB;
+    opacity: 100%;
+    color: #fff;
+}
+.overviev-container-mobile>button:focus{
+    border-bottom: 4px solid #419EBB;
+    opacity: 100%;
+    color: #fff;
+}

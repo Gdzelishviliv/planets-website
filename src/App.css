@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #070724;
+  background-image: url(./assets/images/background-stars.svg);
+  background-size: cover;
+}
