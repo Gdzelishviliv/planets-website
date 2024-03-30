@@ -3,7 +3,7 @@ interface Overview {
   source: string;
 }
 
-interface Images {
+ interface Images {
   planet: string;
   internal: string;
   geology: string;

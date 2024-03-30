@@ -6,10 +6,9 @@ import { PlanetData } from "../types";
 
 interface PlanetProps {
   planetName: string;
-  img:any;
 }
 
-const Planet: React.FC<PlanetProps> = ({ planetName,img }) => {
+const Planet: React.FC<PlanetProps> = ({ planetName }) => {
   const [selectedTab, setSelectedTab] = useState("overview");
 
   const planetData = planetsData.find(
@@ -29,12 +28,14 @@ const Planet: React.FC<PlanetProps> = ({ planetName,img }) => {
     revolution,
     radius,
     temperature,
+    images,
   } = planetData as PlanetData;
 
-  let content: { title: string; text: string; source: string } = {
+  let content: { title: string; text: string; source: string;img:string } = {
     title: "",
     text: "",
     source: "",
+    img:"",
   };
 
   switch (selectedTab) {
@@ -43,6 +44,7 @@ const Planet: React.FC<PlanetProps> = ({ planetName,img }) => {
         title: name,
         text: overview.content,
         source: overview.source,
+        img:images.planet,
       };
       break;
     case "structure":
@@ -50,10 +52,11 @@ const Planet: React.FC<PlanetProps> = ({ planetName,img }) => {
         title: name,
         text: structure.content,
         source: structure.source,
+        img:images.internal,
       };
       break;
     case "geology":
-      content = { title: name, text: geology.content, source: geology.source };
+      content = { title: name, text: geology.content, source: geology.source,img:images.geology, };
       break;
     default:
       break;
@@ -67,7 +70,7 @@ const Planet: React.FC<PlanetProps> = ({ planetName,img }) => {
         <button onClick={() => setSelectedTab("geology")}>Surface</button>
       </div>
       <div className="planet-container">
-        <img src={img} alt={planetName} />
+        <img src={content.img} alt={planetName} />
         <div>
           <div className="information-about">
             <h1>{content.title}</h1>

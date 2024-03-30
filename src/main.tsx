@@ -4,8 +4,6 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import Planet from "./components/planets-page-structure/Structure.tsx";
-import merc from "./assets/images/planets/mercury.svg";
-
 
 const router = createBrowserRouter([
   {
@@ -17,7 +15,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <App />
-        <Planet planetName="mercury" img={merc} />
+        <Planet planetName="mercury" />
       </>
     ),
   },
@@ -26,7 +24,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <App />
-        <Planet planetName="venus" img={merc} />
+        <Planet planetName="venus"/>
       </>
     ),
   },
@@ -35,7 +33,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <App />
-        <Planet planetName="earth" img={merc} />
+        <Planet planetName="earth"/>
       </>
     ),
   },
@@ -44,7 +42,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <App />
-        <Planet planetName="mars" img={merc} />
+        <Planet planetName="mars" />
       </>
     ),
   },
@@ -53,7 +51,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <App />
-        <Planet planetName="jupiter" img={merc} />
+        <Planet planetName="jupiter"  />
       </>
     ),
   },
@@ -62,7 +60,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <App />
-        <Planet planetName="saturn" img={merc} />
+        <Planet planetName="saturn"  />
       </>
     ),
   },
@@ -71,7 +69,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <App />
-        <Planet planetName="uranus" img={merc} />
+        <Planet planetName="uranus"  />
       </>
     ),
   },
@@ -80,7 +78,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <App />
-        <Planet planetName="neptune" img={merc} />
+        <Planet planetName="neptune" />
       </>
     ),
   },
