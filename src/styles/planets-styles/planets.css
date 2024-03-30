@@ -5,6 +5,44 @@
   align-items: center;
   padding-inline: 24px;
 }
+.planet-container .main-image {
+  width: 111px;
+  height: 111px;
+}
+.overviev-container {
+  display: none;
+}
+.planet-info-container {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 8px;
+  padding-inline: 24px;
+  margin-bottom: 47px;
+  margin-top: 28px;
+}
+.planet-info-container > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 9px 24px;
+}
+.planet-info-container > div > h5 {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.727px;
+  text-transform: uppercase;
+}
+.planet-info-container > div > span {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.75px;
+  text-transform: uppercase;
+}
 .planet-container > img {
   width: 111px;
 }
@@ -43,21 +81,127 @@ p {
 .information-about > span > a {
   text-decoration: underline;
 }
-@media screen and (max-width: 600px) {
+.planet-container .surface-image {
+  position: absolute;
+  top: 15vh;
+  width: 50px;
+  height: 60px;
+}
+.planet-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+@media screen and (min-width: 700px) {
   .planet-img-container {
     width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
   }
-  .planet-container  .main-image {
-    width: 111px;
-    height: 111px;
+  .planet-container .main-image {
+    width: 180px;
+    height: 180px;
   }
-  .planet-container .surface-image{
+  .planet-container .surface-image {
     position: absolute;
     top: 15vh;
     width: 50px;
     height: 60px;
+  }
+  .info-overview {
+    width: 100%;
+    margin-top: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .information-about {
+    margin: 0px;
+    align-items: start;
+  }
+  p {
+    text-align: start;
+    width: 339px;
+  }
+  .overviev-container {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .overviev-container > button {
+    width: 281px;
+    height: 40px;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 1.929px;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .overviev-container > button:hover {
+    cursor: pointer;
+    background: rgba(216, 216, 216, 0.2);
+  }
+  .mercury-buttons:focus {
+    cursor: pointer;
+    background-color: #419ebb;
+    opacity: 100%;
+    color: #fff;
+  }
+  .venus-buttons:focus {
+    cursor: pointer;
+    background-color: #eda249;
+    opacity: 100%;
+    color: #fff;
+  }
+  .earth-buttons:focus {
+    cursor: pointer;
+    background-color: #6d2ed5;
+    opacity: 100%;
+    color: #fff;
+  }
+  .mars-buttons:focus {
+    cursor: pointer;
+    background-color: #d14c32;
+    opacity: 100%;
+    color: #fff;
+  }
+  .jupiter-buttons:focus {
+    cursor: pointer;
+    background-color: #d83a34;
+    opacity: 100%;
+    color: #fff;
+  }
+  .saturn-buttons:focus {
+    cursor: pointer;
+    background-color: #cd5120;
+    opacity: 100%;
+    color: #fff;
+  }
+  .uranus-buttons:focus {
+    cursor: pointer;
+    background-color: #1ec1a2;
+    opacity: 100%;
+    color: #fff;
+  }
+  .neptune-buttons:focus {
+    cursor: pointer;
+    background-color: #2d68f0;
+    opacity: 100%;
+    color: #fff;
+  }
+  .planet-info-container {
+    grid-template-columns: auto auto auto auto;
+  }
+  .planet-info-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 16px 64px 19px 15px;
   }
 }

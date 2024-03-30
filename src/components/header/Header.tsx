@@ -10,28 +10,28 @@ const Header = () => {
         </li>
         <div className="planet-links">
           <li>
-            <Link to="/Mercury">mercury</Link>
+            <Link className="mercury-a" to="/Mercury">mercury</Link>
           </li>
           <li>
-            <Link to="/Venus">venus</Link>
+            <Link  className="venus-a"to="/Venus">venus</Link>
           </li>
           <li>
-            <Link to="/Earth">earth</Link>
+            <Link className="earth-a" to="/Earth">earth</Link>
           </li>
           <li>
-            <Link to="/Mars">mars</Link>
+            <Link className="mars-a" to="/Mars">mars</Link>
           </li>
           <li>
-            <Link to="/Jupiter">jupiter</Link>
+            <Link className="jupiter-a" to="/Jupiter">jupiter</Link>
           </li>
           <li>
-            <Link to="/Saturn">saturn</Link>
+            <Link className="saturn-a" to="/Saturn">saturn</Link>
           </li>
           <li>
-            <Link to="/Uranus">uranus</Link>
+            <Link className="uranus-a" to="/Uranus">uranus</Link>
           </li>
           <li>
-            <Link to="/Neptune">neptune</Link>
+            <Link className="neptune-a" to="/Neptune">neptune</Link>
           </li>
         </div>
       </ul>

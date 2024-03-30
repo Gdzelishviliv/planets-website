@@ -80,18 +80,33 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
   return (
     <>
       <div className="overviev-container-mobile">
-        <button onClick={() => setSelectedTab("overview")}>Overview</button>
-        <button onClick={() => setSelectedTab("structure")}>Structure</button>
-        <button onClick={() => setSelectedTab("geology")}>Surface</button>
+        <button
+          className={`${planetName.toLowerCase()}-button`}
+          onClick={() => setSelectedTab("overview")}
+        >
+          Overview
+        </button>
+        <button
+          className={`${planetName.toLowerCase()}-button`}
+          onClick={() => setSelectedTab("structure")}
+        >
+          Structure
+        </button>
+        <button
+          className={`${planetName.toLowerCase()}-button`}
+          onClick={() => setSelectedTab("geology")}
+        >
+          Surface
+        </button>
       </div>
       <div className="planet-container">
         <div className="planet-img-container">
-          <img src={content.img} alt={planetName} className="main-image"/>
+          <img src={content.img} alt={planetName} className="main-image" />
           {selectedTab === "geology" && (
             <img src={content.miniImg} className="surface-image" />
           )}
         </div>
-        <div>
+        <div className="info-overview">
           <div className="information-about">
             <h1>{content.title}</h1>
             <p>{content.text}</p>
@@ -106,9 +121,29 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
               </a>
             </span>
           </div>
+          <div className="overviev-container">
+            <button
+              className={`${planetName.toLowerCase()}-buttons`}
+              onClick={() => setSelectedTab("overview")}
+            >
+              Overview
+            </button>
+            <button
+              className={`${planetName.toLowerCase()}-buttons`}
+              onClick={() => setSelectedTab("structure")}
+            >
+              Internal Structure
+            </button>
+            <button
+              className={`${planetName.toLowerCase()}-buttons`}
+              onClick={() => setSelectedTab("geology")}
+            >
+              Surface Geology
+            </button>
+          </div>
         </div>
       </div>
-      <div>
+      <div className="planet-info-container">
         <div>
           <h5>ROTATION TIME</h5>
           <span>{rotation}</span>

@@ -17,13 +17,52 @@
     justify-content: space-around;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.overviev-container-mobile>button:hover{
+.mercury-button:hover{
     border-bottom: 4px solid #419EBB;
     opacity: 100%;
     color: #fff;
 }
-.overviev-container-mobile>button:focus{
-    border-bottom: 4px solid #419EBB;
+.venus-button:hover{
+    border-bottom: 4px solid #EDA249;
     opacity: 100%;
     color: #fff;
+}
+.earth-button:hover{
+    border-bottom: 4px solid #6D2ED5;
+    opacity: 100%;
+    color: #fff;
+}
+.mars-button:hover{
+    border-bottom: 4px solid #D14C32;
+    opacity: 100%;
+    color: #fff;
+}
+.jupiter-button:hover{
+    border-bottom: 4px solid #D83A34;
+    opacity: 100%;
+    color: #fff;
+}
+.saturn-button:hover{
+    border-bottom: 4px solid #CD5120;
+    opacity: 100%;
+    color: #fff;
+}
+.uranus-button:hover{
+    border-bottom: 4px solid #1EC1A2;
+    opacity: 100%;
+    color: #fff;
+}
+.neptune-button:hover{
+    border-bottom: 4px solid #2D68F0;
+    opacity: 100%;
+    color: #fff;
+}
+.overviev-container-mobile>button:focus{
+    opacity: 100%;
+    color: #fff;
+}
+@media screen and (min-width: 700px){
+    .overviev-container-mobile{
+        display: none;
+    }
 }
