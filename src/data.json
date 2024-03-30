@@ -20,7 +20,7 @@
       "images": {
         "planet": "/src/assets/images/planets/planet-mercury.svg",
         "internal": "/src/assets/images/planets/planet-mercury-internal.svg",
-        "geology": "/src/assets/images/planets/geology-mercury.png"
+        "geology": "/src/assets/images/planets/planet-mercury-geology.png"
       }
     },
     {
@@ -44,7 +44,7 @@
       "images": {
         "planet": "/src/assets/images/planets/planet-venus.svg",
         "internal": "/src/assets/images/planets/planet-venus-internal.svg",
-        "geology": "/src/assets/images/planets/geology-venus.png"
+        "geology": "/src/assets/images/planets/planet-venus-geology.png"
       }
     },
     {
@@ -68,7 +68,7 @@
       "images": {
         "planet": "/src/assets/images/planets/planet-earth.svg",
         "internal": "/src/assets/images/planets/planet-earth-internal.svg",
-        "geology": "/src/assets/images/planets/geology-earth.png"
+        "geology": "/src/assets/images/planets/planet-earth-geology.png"
       }
     },
     {
@@ -92,7 +92,7 @@
       "images": {
         "planet": "/src/assets/images/planets/planet-mars.svg",
         "internal": "/src/assets/images/planets/planet-mars-internal.svg",
-        "geology": "/src/assets/images/planets/geology-mars.png"
+        "geology": "/src/assets/images/planets/planet-mars-geology.png"
       }
     },
     {
@@ -116,7 +116,7 @@
       "images": {
         "planet": "/src/assets/images/planets/planet-jupiter.svg",
         "internal": "/src/assets/images/planets/planet-jupiter-internal.svg",
-        "geology": "/src/assets/images/planets/geology-jupiter.png"
+        "geology": "/src/assets/images/planets/planet-jupiter-geology.png"
       }
     },
     {
@@ -140,7 +140,7 @@
       "images": {
         "planet": "/src/assets/images/planets/planet-saturn.svg",
         "internal": "/src/assets/images/planets/planet-saturn-internal.svg",
-        "geology": "/src/assets/images/planets/geology-saturn.png"
+        "geology": "/src/assets/images/planets/planet-saturn-geology.png"
       }
     },
     {
@@ -164,7 +164,7 @@
       "images": {
         "planet": "/src/assets/images/planets/planet-uranus.svg",
         "internal": "/src/assets/images/planets/planet-uranus-internal.svg",
-        "geology": "/src/assets/images/planets/geology-uranus.png"
+        "geology": "/src/assets/images/planets/planet-uranus-geology.png"
       }
     },
     {
@@ -188,7 +188,7 @@
       "images": {
         "planet": "/src/assets/images/planets/planet-neptune.svg",
         "internal": "/src/assets/images/planets/planet-neptune-internal.svg",
-        "geology": "/src/assets/images/planets/geology-neptune.png"
+        "geology": "/src/assets/images/planets/planet-neptune-geology.png"
       }
     }
   ]

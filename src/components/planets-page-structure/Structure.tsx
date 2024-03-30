@@ -31,11 +31,18 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
     images,
   } = planetData as PlanetData;
 
-  let content: { title: string; text: string; source: string;img:string } = {
+  let content: {
+    title: string;
+    text: string;
+    source: string;
+    img: string;
+    miniImg: string;
+  } = {
     title: "",
     text: "",
     source: "",
-    img:"",
+    img: "",
+    miniImg: "",
   };
 
   switch (selectedTab) {
@@ -44,7 +51,8 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
         title: name,
         text: overview.content,
         source: overview.source,
-        img:images.planet,
+        img: images.planet,
+        miniImg: "",
       };
       break;
     case "structure":
@@ -52,11 +60,18 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
         title: name,
         text: structure.content,
         source: structure.source,
-        img:images.internal,
+        img: images.internal,
+        miniImg: "",
       };
       break;
     case "geology":
-      content = { title: name, text: geology.content, source: geology.source,img:images.geology, };
+      content = {
+        title: name,
+        text: geology.content,
+        source: geology.source,
+        img: images.planet,
+        miniImg: images.geology,
+      };
       break;
     default:
       break;
@@ -70,7 +85,12 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
         <button onClick={() => setSelectedTab("geology")}>Surface</button>
       </div>
       <div className="planet-container">
-        <img src={content.img} alt={planetName} />
+        <div className="planet-img-container">
+          <img src={content.img} alt={planetName} className="main-image"/>
+          {selectedTab === "geology" && (
+            <img src={content.miniImg} className="surface-image" />
+          )}
+        </div>
         <div>
           <div className="information-about">
             <h1>{content.title}</h1>

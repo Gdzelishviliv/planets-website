@@ -5,7 +5,7 @@
   align-items: center;
   padding-inline: 24px;
 }
-.planet-container>img {
+.planet-container > img {
   width: 111px;
 }
 .information-about {
@@ -42,4 +42,22 @@ p {
 }
 .information-about > span > a {
   text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+  .planet-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .planet-container  .main-image {
+    width: 111px;
+    height: 111px;
+  }
+  .planet-container .surface-image{
+    position: absolute;
+    top: 15vh;
+    width: 50px;
+    height: 60px;
+  }
 }
