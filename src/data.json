@@ -18,9 +18,9 @@
       "radius": "2,439.7 KM",
       "temperature": "430°c",
       "images": {
-        "planet": "./public/planets/planet-mercury.svg",
-        "internal": "/src/assets/images/planets/planet-mercury-internal.svg",
-        "geology": "/src/assets/images/planets/planet-mercury-geology.png"
+        "planet": "/planets/planet-mercury.svg",
+        "internal": "/planets/planet-mercury-internal.svg",
+        "geology": "/planets/planet-mercury-geology.png"
       }
     },
     {
@@ -42,9 +42,9 @@
       "radius": "6,051.8 KM",
       "temperature": "471°c",
       "images": {
-        "planet": "/src/assets/images/planets/planet-venus.svg",
-        "internal": "/src/assets/images/planets/planet-venus-internal.svg",
-        "geology": "/src/assets/images/planets/planet-venus-geology.png"
+        "planet": "/planets/planet-venus.svg",
+        "internal": "/planets/planet-venus-internal.svg",
+        "geology": "/planets/planet-venus-geology.png"
       }
     },
     {
@@ -66,9 +66,9 @@
       "radius": "6,371 KM",
       "temperature": "16°c",
       "images": {
-        "planet": "/src/assets/images/planets/planet-earth.svg",
-        "internal": "/src/assets/images/planets/planet-earth-internal.svg",
-        "geology": "/src/assets/images/planets/planet-earth-geology.png"
+        "planet": "/planets/planet-earth.svg",
+        "internal": "/planets/planet-earth-internal.svg",
+        "geology": "/planets/planet-earth-geology.png"
       }
     },
     {
@@ -90,9 +90,9 @@
       "radius": "3,389.5 KM",
       "temperature": "-28°c",
       "images": {
-        "planet": "/src/assets/images/planets/planet-mars.svg",
-        "internal": "/src/assets/images/planets/planet-mars-internal.svg",
-        "geology": "/src/assets/images/planets/planet-mars-geology.png"
+        "planet": "/planets/planet-mars.svg",
+        "internal": "/planets/planet-mars-internal.svg",
+        "geology": "/planets/planet-mars-geology.png"
       }
     },
     {
@@ -114,9 +114,9 @@
       "radius": "69,911 KM",
       "temperature": "-108°c",
       "images": {
-        "planet": "/src/assets/images/planets/planet-jupiter.svg",
-        "internal": "/src/assets/images/planets/planet-jupiter-internal.svg",
-        "geology": "/src/assets/images/planets/planet-jupiter-geology.png"
+        "planet": "/planets/planet-jupiter.svg",
+        "internal": "/planets/planet-jupiter-internal.svg",
+        "geology": "/planets/planet-jupiter-geology.png"
       }
     },
     {
@@ -138,9 +138,9 @@
       "radius": "58,232 KM",
       "temperature": "-138°c",
       "images": {
-        "planet": "/src/assets/images/planets/planet-saturn.svg",
-        "internal": "/src/assets/images/planets/planet-saturn-internal.svg",
-        "geology": "/src/assets/images/planets/planet-saturn-geology.png"
+        "planet": "/planets/planet-saturn.svg",
+        "internal": "/planets/planet-saturn-internal.svg",
+        "geology": "/planets/planet-saturn-geology.png"
       }
     },
     {
@@ -162,9 +162,9 @@
       "radius": "25,362 KM",
       "temperature": "-195°c",
       "images": {
-        "planet": "/src/assets/images/planets/planet-uranus.svg",
-        "internal": "/src/assets/images/planets/planet-uranus-internal.svg",
-        "geology": "/src/assets/images/planets/planet-uranus-geology.png"
+        "planet": "/planets/planet-uranus.svg",
+        "internal": "/planets/planet-uranus-internal.svg",
+        "geology": "/planets/planet-uranus-geology.png"
       }
     },
     {
@@ -186,9 +186,9 @@
       "radius": "24,622 KM",
       "temperature": "-201°c",
       "images": {
-        "planet": "/src/assets/images/planets/planet-neptune.svg",
-        "internal": "/src/assets/images/planets/planet-neptune-internal.svg",
-        "geology": "/src/assets/images/planets/planet-neptune-geology.png"
+        "planet": "/planets/planet-neptune.svg",
+        "internal": "/planets/planet-neptune-internal.svg",
+        "geology": "/planets/planet-neptune-geology.png"
       }
     }
   ]
