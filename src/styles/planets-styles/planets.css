@@ -28,6 +28,7 @@
   padding: 9px 24px;
 }
 .planet-info-container > div > h5 {
+  font-family: "League Spartan", sans-serif;
   color: #fff;
   opacity: 0.5;
   font-size: 8px;
@@ -37,6 +38,7 @@
   text-transform: uppercase;
 }
 .planet-info-container > div > span {
+  font-family: Antonio;
   color: #fff;
   font-size: 20px;
   font-weight: 400;
@@ -64,7 +66,7 @@ h1 {
 p {
   color: #fff;
   text-align: center;
-  font-family: Spartan;
+  font-family: "League Spartan", sans-serif;
   font-size: 11px;
   font-weight: 400;
   line-height: 22px;
@@ -72,7 +74,7 @@ p {
 .information-about > span,
 .information-about > span > a {
   color: #fff;
-  font-family: Spartan;
+  font-family: "League Spartan", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 25px;
@@ -132,6 +134,7 @@ p {
     gap: 16px;
   }
   .overviev-container > button {
+    font-family: "League Spartan", sans-serif;
     width: 281px;
     height: 40px;
     color: #fff;
@@ -203,5 +206,74 @@ p {
     flex-direction: column;
     align-items: start;
     padding: 16px 64px 19px 15px;
+  }
+  .planet-info-container > div > span{
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1200px){
+  .planet-info-container > div > h5{
+    font-size: 11px;
+  }
+  .planet-info-container > div > span{
+    font-size: 40px;
+  }
+  .planet-container{
+    flex-direction: unset;
+    padding-inline: 165px;
+  }
+  .info-overview{
+    flex-direction: column;
+  }
+  .planet-container .main-image{
+    width: 490px;
+    height: 490px;
+  }
+  .information-about{
+    gap: 24px;
+  }
+  .info-overview{
+    margin-top: 0;
+    height: 100vh;
+    justify-content:center;
+    gap: 39px;
+  }
+  p{
+    width: 350px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .overviev-container > button{
+    width: 350px;
+    height: 48px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 2.571px;
+  }
+  .overviev-container{
+    width: auto;
+  }
+  h1{
+    font-size: 80px;
+    font-weight: 400;
+  }
+  .information-about > span, .information-about > span > a{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  .planet-container .surface-image{
+    width: 158px;
+    height: 185px;
+    top: 40vh;
+  }
+  .planet-info-container{
+    padding-inline: 165px;
+    gap: 30px;
+  }
+  .planet-info-container > div{
+    padding: 20px 92px 27px 23px;
   }
 }

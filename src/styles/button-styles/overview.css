@@ -1,4 +1,5 @@
-.overviev-container-mobile>button {
+.overviev-container-mobile > button {
+  font-family: "League Spartan", sans-serif;
   background: transparent;
   border: 0px;
   color: #fff;
@@ -12,57 +13,57 @@
   cursor: pointer;
   height: 50px;
 }
-.overviev-container-mobile{
-    display: flex;
-    justify-content: space-around;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+.overviev-container-mobile {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-.mercury-button:hover{
-    border-bottom: 4px solid #419EBB;
-    opacity: 100%;
-    color: #fff;
+.mercury-button:hover {
+  border-bottom: 4px solid #419ebb;
+  opacity: 100%;
+  color: #fff;
 }
-.venus-button:hover{
-    border-bottom: 4px solid #EDA249;
-    opacity: 100%;
-    color: #fff;
+.venus-button:hover {
+  border-bottom: 4px solid #eda249;
+  opacity: 100%;
+  color: #fff;
 }
-.earth-button:hover{
-    border-bottom: 4px solid #6D2ED5;
-    opacity: 100%;
-    color: #fff;
+.earth-button:hover {
+  border-bottom: 4px solid #6d2ed5;
+  opacity: 100%;
+  color: #fff;
 }
-.mars-button:hover{
-    border-bottom: 4px solid #D14C32;
-    opacity: 100%;
-    color: #fff;
+.mars-button:hover {
+  border-bottom: 4px solid #d14c32;
+  opacity: 100%;
+  color: #fff;
 }
-.jupiter-button:hover{
-    border-bottom: 4px solid #D83A34;
-    opacity: 100%;
-    color: #fff;
+.jupiter-button:hover {
+  border-bottom: 4px solid #d83a34;
+  opacity: 100%;
+  color: #fff;
 }
-.saturn-button:hover{
-    border-bottom: 4px solid #CD5120;
-    opacity: 100%;
-    color: #fff;
+.saturn-button:hover {
+  border-bottom: 4px solid #cd5120;
+  opacity: 100%;
+  color: #fff;
 }
-.uranus-button:hover{
-    border-bottom: 4px solid #1EC1A2;
-    opacity: 100%;
-    color: #fff;
+.uranus-button:hover {
+  border-bottom: 4px solid #1ec1a2;
+  opacity: 100%;
+  color: #fff;
 }
-.neptune-button:hover{
-    border-bottom: 4px solid #2D68F0;
-    opacity: 100%;
-    color: #fff;
+.neptune-button:hover {
+  border-bottom: 4px solid #2d68f0;
+  opacity: 100%;
+  color: #fff;
 }
-.overviev-container-mobile>button:focus{
-    opacity: 100%;
-    color: #fff;
+.overviev-container-mobile > button:focus {
+  opacity: 100%;
+  color: #fff;
 }
-@media screen and (min-width: 700px){
-    .overviev-container-mobile{
-        display: none;
-    }
+@media screen and (min-width: 700px) {
+  .overviev-container-mobile {
+    display: none;
+  }
 }

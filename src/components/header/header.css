@@ -67,6 +67,7 @@ ul {
   list-style-type: none;
 }
 .planet-links > li > a {
+  font-family: Antonio;
   height: 50px;
   display: flex;
   align-items: flex-end;
@@ -79,6 +80,7 @@ ul {
   text-transform: uppercase;
 }
 .home-btn > a {
+  font-family: Antonio;
   color: #fff;
   font-size: 28px;
   font-weight: 400;
@@ -144,3 +146,15 @@ ul {
     gap: 39px;
   }
 }
+@media screen and (min-width: 1200px){
+  .header-container{
+    margin-top: 0;
+  }
+  .header-container>ul{
+    flex-direction: unset;
+  }
+  .home-btn{
+    margin-top: 18px;
+  }
+}
+
