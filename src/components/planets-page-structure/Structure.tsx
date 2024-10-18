@@ -3,6 +3,7 @@ import "../../styles/planets-styles/planets.css";
 import "../../styles/button-styles/overview.css";
 import planetsData from "../../data.json";
 import { PlanetData } from "../types";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface PlanetProps {
   planetName: string;
@@ -99,68 +100,157 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
           Surface
         </button>
       </div>
-      <div className="planet-container">
+      <motion.div
+        className="planet-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="planet-img-container">
-          <img src={content.img} alt={planetName} className="main-image" />
+          <motion.img
+            src={content.img}
+            alt={planetName}
+            className="main-image"
+            initial={{ y: 50 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          />
           {selectedTab === "geology" && (
-            <img src={content.miniImg} className="surface-image" />
+            <motion.img
+              src={content.miniImg}
+              className="surface-image"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            />
           )}
         </div>
-        <div className="info-overview">
-          <div className="information-about">
-            <h1>{content.title}</h1>
-            <p>{content.text}</p>
-            <span>
-              source:{" "}
-              <a
-                href={content.source}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Wikipedia
-              </a>
-            </span>
-          </div>
+        <motion.div
+          className="info-overview"
+          initial={{ x: -100 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedTab}
+              className="information-about"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1>{content.title}</h1>
+              <p>{content.text}</p>
+              <span>
+                source:{" "}
+                <a
+                  href={content.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Wikipedia
+                </a>
+              </span>
+            </motion.div>
+          </AnimatePresence>
           <div className="overviev-container">
-            <button
+          <motion.button
+              initial={{ y: 250 }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 1 }}
               className={`${planetName.toLowerCase()}-buttons`}
               onClick={() => setSelectedTab("overview")}
             >
               Overview
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              initial={{ y: 250 }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 1.3 }}
               className={`${planetName.toLowerCase()}-buttons`}
               onClick={() => setSelectedTab("structure")}
             >
               Internal Structure
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              initial={{ y: 250 }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 1.8 }}
               className={`${planetName.toLowerCase()}-buttons`}
               onClick={() => setSelectedTab("geology")}
             >
               Surface Geology
-            </button>
+            </motion.button>
           </div>
-        </div>
-      </div>
-      <div className="planet-info-container">
-        <div>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        className="planet-info-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        <motion.div
+          initial={{ x: 50 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h5>ROTATION TIME</h5>
-          <span>{rotation}</span>
-        </div>
-        <div>
+          <motion.span
+            initial={{ x: 75 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1.8 }}
+          >
+            {rotation}
+          </motion.span>
+        </motion.div>
+        <motion.div
+          initial={{ x: 50 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h5>REVOLUTION TIME</h5>
-          <span>{revolution}</span>
-        </div>
-        <div>
+          <motion.span
+            initial={{ x: 75 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1.8 }}
+          >
+            {revolution}
+          </motion.span>
+        </motion.div>
+        <motion.div
+          initial={{ x: 50 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h5>radius</h5>
-          <span>{radius}</span>
-        </div>
-        <div>
+          <motion.span
+          initial={{x:75}}
+          whileInView={{x:0}}
+          transition={{duration:1.8}}
+          >{radius}</motion.span>
+        </motion.div>
+        <motion.div
+          initial={{ x: 50 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h5>AVERAGE TEMP.</h5>
-          <span>{temperature}</span>
-        </div>
-      </div>
+          <motion.span
+            initial={{ x: 75 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1.8 }}
+          >
+            {temperature}
+          </motion.span>
+        </motion.div>
+      </motion.div>
     </>
   );
 };

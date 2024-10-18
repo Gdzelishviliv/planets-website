@@ -57,9 +57,9 @@
   width: 665px;
   height: 50px;
 }
-.header-container {
+.header-container { 
   margin-top: 32px;
-  padding-inline: 32px;
+  padding-inline: 200px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 32px;
 }
@@ -157,4 +157,17 @@ ul {
     margin-top: 18px;
   }
 }
+.toggle-btn {
+  width: 20px;
+  height: 2px;
+  background-color: rgb(255,255,255,0.248746);
+  border-radius: 2px;
+}
 
+.toggle-btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}

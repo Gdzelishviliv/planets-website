@@ -85,7 +85,7 @@ p {
 }
 .planet-container .surface-image {
   position: absolute;
-  top: 15vh;
+  top: 70px;
   width: 50px;
   height: 60px;
 }
@@ -108,7 +108,7 @@ p {
   }
   .planet-container .surface-image {
     position: absolute;
-    top: 15vh;
+    top: 130px;
     width: 50px;
     height: 60px;
   }
