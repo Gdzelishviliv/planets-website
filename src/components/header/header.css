@@ -116,7 +116,7 @@ ul {
     flex-direction: column;
     padding-inline: 24px;
   }
-  .options-card > ul > li > div > a {
+  .options-card > ul > a > li > div > a,.mobile-burger-menu {
     color: #fff;
     text-align: center;
     font-size: 15px;
@@ -125,14 +125,14 @@ ul {
     letter-spacing: 1.364px;
     text-transform: uppercase;
   }
-  .options-card > ul > li {
+  .options-card > ul > a > li {
     display: flex;
     height: 60px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
-  .options-card > ul > li > div {
+  .options-card > ul > a > li > div{
     display: flex;
     gap: 25px;
     align-items: center;

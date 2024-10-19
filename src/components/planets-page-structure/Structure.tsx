@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/planets-styles/planets.css";
 import "../../styles/button-styles/overview.css";
 import planetsData from "../../data.json";
@@ -11,10 +11,18 @@ interface PlanetProps {
 
 const Planet: React.FC<PlanetProps> = ({ planetName }) => {
   const [selectedTab, setSelectedTab] = useState("overview");
+  const [screenSize, setScreenSize] = useState(window.innerWidth);
 
   const planetData = planetsData.find(
     (planet) => planet.name.toUpperCase() === planetName.toUpperCase()
   );
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   if (!planetData) {
     return <div>Planet data not found!</div>;
@@ -32,17 +40,11 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
     images,
   } = planetData as PlanetData;
 
-  let content: {
-    title: string;
-    text: string;
-    source: string;
-    img: string;
-    miniImg: string;
-  } = {
-    title: "",
-    text: "",
-    source: "",
-    img: "",
+  let content = {
+    title: name,
+    text: overview.content,
+    source: overview.source,
+    img: images.planet,
     miniImg: "",
   };
 
@@ -78,6 +80,12 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
       break;
   }
 
+  const animationProps = {
+    x: screenSize < 768 ? -50 : -100,
+    y: screenSize < 768 ? 25 : 50,
+    duration: screenSize < 768 ? 0.3 : 0.5,
+  };
+
   return (
     <>
       <div className="overviev-container-mobile">
@@ -101,21 +109,20 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
         </button>
       </div>
       <motion.div
+        key={location.pathname}
         className="planet-container"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: animationProps.duration }}
       >
         <div className="planet-img-container">
           <motion.img
             src={content.img}
             alt={planetName}
             className="main-image"
-            initial={{ y: 50 }}
+            initial={{ y: animationProps.y }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: animationProps.duration }}
           />
           {selectedTab === "geology" && (
             <motion.img
@@ -123,17 +130,15 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
               className="surface-image"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: animationProps.duration }}
             />
           )}
         </div>
         <motion.div
           className="info-overview"
-          initial={{ x: -100 }}
+          initial={{ x: animationProps.x }}
           whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: animationProps.duration }}
         >
           <AnimatePresence mode="wait">
             <motion.div
@@ -142,7 +147,7 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: animationProps.duration }}
             >
               <h1>{content.title}</h1>
               <p>{content.text}</p>
@@ -159,7 +164,7 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
             </motion.div>
           </AnimatePresence>
           <div className="overviev-container">
-          <motion.button
+            <motion.button
               initial={{ y: 250 }}
               whileInView={{ y: 0 }}
               transition={{ duration: 1 }}
@@ -193,17 +198,16 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
         className="planet-info-container"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <motion.div
-          initial={{ x: 50 }}
+          initial={{ x: animationProps.x }}
           whileInView={{ x: 0 }}
           transition={{ duration: 1 }}
         >
           <h5>ROTATION TIME</h5>
           <motion.span
-            initial={{ x: 75 }}
+            initial={{ x: animationProps.x }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1.8 }}
           >
@@ -211,13 +215,13 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
           </motion.span>
         </motion.div>
         <motion.div
-          initial={{ x: 50 }}
+          initial={{ x: animationProps.x }}
           whileInView={{ x: 0 }}
           transition={{ duration: 1 }}
         >
           <h5>REVOLUTION TIME</h5>
           <motion.span
-            initial={{ x: 75 }}
+            initial={{ x: animationProps.x }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1.8 }}
           >
@@ -225,25 +229,27 @@ const Planet: React.FC<PlanetProps> = ({ planetName }) => {
           </motion.span>
         </motion.div>
         <motion.div
-          initial={{ x: 50 }}
+          initial={{ x: animationProps.x }}
           whileInView={{ x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h5>radius</h5>
+          <h5>RADIUS</h5>
           <motion.span
-          initial={{x:75}}
-          whileInView={{x:0}}
-          transition={{duration:1.8}}
-          >{radius}</motion.span>
+            initial={{ x: animationProps.x }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1.8 }}
+          >
+            {radius}
+          </motion.span>
         </motion.div>
         <motion.div
-          initial={{ x: 50 }}
+          initial={{ x: animationProps.x }}
           whileInView={{ x: 0 }}
           transition={{ duration: 1 }}
         >
           <h5>AVERAGE TEMP.</h5>
           <motion.span
-            initial={{ x: 75 }}
+            initial={{ x: animationProps.x }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1.8 }}
           >

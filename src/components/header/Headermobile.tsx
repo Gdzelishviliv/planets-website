@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "./header.css";
-// import mobileImg from "../../assets/images/button-icons/mobile-header-icn.svg";
 import mercDisc from "../../assets/images/ul-circles/mercDisc.png";
 import venusDisc from "../../assets/images/ul-circles/venusDisc.png";
 import earthDisc from "../../assets/images/ul-circles/earthDisc.png";
@@ -89,13 +88,15 @@ const Headermobile = () => {
                 { img: uranusDisc, name: "uranus", path: "/Uranus" },
                 { img: neptuneDisc, name: "neptune", path: "/Neptune" },
               ].map((planet, index) => (
-                <li key={index}>
-                  <div>
-                    <img src={planet.img} alt={`${planet.name}-icon`} />
-                    <Link to={planet.path}>{planet.name}</Link>
-                  </div>
-                  <img src={arrow} alt="arrow-icon" />
-                </li>
+                <Link to={planet.path} className="mobile-burger-menu">
+                  <li key={index}>
+                    <div>
+                      <img src={planet.img} alt={`${planet.name}-icon`} />
+                      <Link to={planet.path}>{planet.name}</Link>
+                    </div>
+                    <img src={arrow} alt="arrow-icon" />
+                  </li>
+                </Link>
               ))}
             </ul>
           </motion.div>
